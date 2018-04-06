@@ -1,0 +1,24 @@
+{
+  "name": "RecordStoreHomework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha specs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christiebelle/JavaScriptRecordStore.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christiebelle/JavaScriptRecordStore/issues"
+  },
+  "homepage": "https://github.com/christiebelle/JavaScriptRecordStore#readme",
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "mocha": "^5.0.5"
+  }
+}
