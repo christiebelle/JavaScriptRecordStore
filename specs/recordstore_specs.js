@@ -68,13 +68,18 @@ describe('recordstore', function() {
     assert.deepStrictEqual(recordstore.financials(), "Financials for Wee Music Shop. Store balance is £160.99, and the stock total is £33.97");
   });
 
+  it("should list records by genre", function() {
+    recordstore.addRecord(record1);
+    recordstore.addRecord(record2);
+    recordstore.addRecord(record3);
+    recordstore.addRecord(record4);
+    assert.deepStrictEqual(recordstore.filterGenre("Rock"), [record3]);
+  });
+
 });
 
 // Part B
 // Create a method that lists the inventory. PENDING
-
-// Create a method so the Record Store can sell a Record and adjusts the Store's
-// balance to account for the Record being sold.
 
 // Create a method that allows the store to view all Records of a given Genre.
 

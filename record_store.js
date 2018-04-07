@@ -22,6 +22,11 @@ RecordStore.prototype.sell = function (record) {
   this.inventory.splice(soldRecord, 1,);
 };
 
+RecordStore.prototype.filterGenre = function (genre) {
+  let filtered = _.filter(this.inventory, ['genre' === genre]);
+  return filtered;
+};
+
 //PENDING
 // RecordStore.prototype.listInventory = function () {
 //   return _.orderBy(this.inventory, ['artist', 'title'], ['asc', 'asc']);
