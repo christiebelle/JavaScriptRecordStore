@@ -1,3 +1,5 @@
+const _ = require("lodash");
+
 var RecordStore = function(name, city, balance) {
   this.name = name;
   this.city = city;
@@ -9,10 +11,9 @@ RecordStore.prototype.addRecord = function (record) {
   this.inventory.push(record);
 };
 
-module.exports = RecordStore;
+//PENDING
+// RecordStore.prototype.listInventory = function () {
+//   return _.orderBy(this.inventory, ['artist', 'title'], ['asc', 'asc']);
+// };
 
-// Part A
-// Create a Record object that has an Artist, Title, Genre, and Price
-// Create a Record Store that has a Name, City and an Inventory.
-// Give the Record Store a Balance.
-// Add some Records to the Store's Inventory.
+module.exports = RecordStore;

@@ -42,11 +42,16 @@ describe('recordstore', function() {
     assert.strictEqual(recordstore.inventory.length, 4);
   });
 
+  xit("should be able to list inventory", function() {
+    recordstore.addRecord(record1);
+    recordstore.addRecord(record2);
+    assert.strictEqual(recordstore.listInventory(), [{"Kaleo", "A/B"}, {"Take That", "Never Forget: Greatist Hits"}]);
+  });
+
 });
 
 // Part B
-// Create a method that prints out the Record's properties as a string.
-// Create a method that lists the inventory.
+// Create a method that lists the inventory. PENDING
 // Create a method so the Record Store can sell a Record and adjusts the Store's
 // balance to account for the Record being sold.
 // Create a method that reports the financial situation of the Store, showing the
