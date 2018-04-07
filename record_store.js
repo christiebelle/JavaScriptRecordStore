@@ -16,6 +16,12 @@ RecordStore.prototype.financials = function () {
   return `Financials for ${this.name}. Store balance is £${this.balance}, and the stock total is £${inventorySum}`;
 };
 
+RecordStore.prototype.sell = function (record) {
+  this.balance += record.price;
+  let soldRecord = _.indexOf(record);
+  this.inventory.splice(soldRecord, 1,);
+};
+
 //PENDING
 // RecordStore.prototype.listInventory = function () {
 //   return _.orderBy(this.inventory, ['artist', 'title'], ['asc', 'asc']);

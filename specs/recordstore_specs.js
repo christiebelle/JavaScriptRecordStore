@@ -50,7 +50,7 @@ describe('recordstore', function() {
   //   assert.deepStrictEqual(recordstore.listInventory(), [{"Kaleo", "A/B"}, {"Take That", "Never Forget: Greatist Hits"}]);
   // });
 
-  it("should be able to state the financial of the store", function() {
+  it("should be able to state the financials of the store", function() {
     recordstore.addRecord(record1);
     recordstore.addRecord(record2);
     recordstore.addRecord(record3);
@@ -58,22 +58,39 @@ describe('recordstore', function() {
     assert.deepStrictEqual(recordstore.financials(), "Financials for Wee Music Shop. Store balance is £150, and the stock total is £44.96");
   });
 
+  it("should be able to sell a record", function() {
+    recordstore.addRecord(record1);
+    recordstore.addRecord(record2);
+    recordstore.addRecord(record3);
+    recordstore.addRecord(record4);
+    recordstore.sell(record4);
+    assert.strictEqual(recordstore.inventory.length, 3);
+    assert.deepStrictEqual(recordstore.financials(), "Financials for Wee Music Shop. Store balance is £160.99, and the stock total is £33.97");
+  });
+
 });
 
 // Part B
 // Create a method that lists the inventory. PENDING
+
 // Create a method so the Record Store can sell a Record and adjusts the Store's
 // balance to account for the Record being sold.
-// Create a method that reports the financial situation of the Store, showing the
-// balance and value of inventory.
+
 // Create a method that allows the store to view all Records of a given Genre.
+
 // Part C
 // Create a RecordCollector (or Customer) constructor who can buy and sell records.
+
 // The RecordCollector should have cash that increase and decreases with buying and selling.
+
 // The RecordCollector shouldn't be able to buy a Record if he can't afford it.
+
 // The RecordCollector should be able to view the total value of their collection
+
 // The RecordCollector should be able to view the total value of all records of a given Genre
 // The RecordCollector should be able to view their most valuable record.
+
 // The RecordCollector should be able to sort their records by value. (ascending or descending)
+
 // The RecordCollector should be able to compare the value of their collection with another
 // RecordCollector
