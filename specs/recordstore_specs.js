@@ -1,29 +1,29 @@
 var assert = require('assert');
-var Bank = require('../bank.js');
-var Account = require('../account.js');
+var Record = require('../records.js');
+var RecordStore = require('../record_store.js');
 
-describe('Bank', function() {
+describe('recordstore', function() {
 
-  var account1;
-  var account2;
-  var account3;
-  var account4;
-  var bank;
+  var record1;
+  var record2;
+  var record3;
+  var record4;
+  var recordstore;
 
   beforeEach(function() {
-    account1 = new Account("Sian", 60, 'personal');
-    account2 = new Account("Keith", 10, 'business');
-    account3 = new Account("Harrison", 80, 'personal');
-    account4 = new Account("Craig", 5, 'business');
-    bank = new Bank();
-    bank.addAccount(account1);
-    bank.addAccount(account2);
-    bank.addAccount(account3);
-    bank.addAccount(account4);
+    record1 = new Record("Sian", 60, 'personal');
+    record2 = new Record("Keith", 10, 'business');
+    record3 = new Record("Harrison", 80, 'personal');
+    record4 = new Record("Craig", 5, 'business');
+    recordstore = new RecordStore();
+    recordstore.addRecord(record1);
+    recordstore.addRecord(record2);
+    recordstore.addRecord(record3);
+    recordstore.addRecord(record4);
   })
 
-  it("should be able to add account", function() {
-    assert.strictEqual(bank.accounts.length, 4);
+  it("should be able to add record", function() {
+    assert.strictEqual(recordstore.records.length, 4);
   });
 
 });
