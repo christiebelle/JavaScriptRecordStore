@@ -42,10 +42,20 @@ describe('recordstore', function() {
     assert.strictEqual(recordstore.inventory.length, 4);
   });
 
-  xit("should be able to list inventory", function() {
+  // xit("should be able to list inventory", function() {
+  //   recordstore.addRecord(record1);
+  //   recordstore.addRecord(record2);
+  //   recordstore.addRecord(record3);
+  //   recordstore.addRecord(record4);
+  //   assert.deepStrictEqual(recordstore.listInventory(), [{"Kaleo", "A/B"}, {"Take That", "Never Forget: Greatist Hits"}]);
+  // });
+
+  it("should be able to state the financial of the store", function() {
     recordstore.addRecord(record1);
     recordstore.addRecord(record2);
-    assert.strictEqual(recordstore.listInventory(), [{"Kaleo", "A/B"}, {"Take That", "Never Forget: Greatist Hits"}]);
+    recordstore.addRecord(record3);
+    recordstore.addRecord(record4);
+    assert.deepStrictEqual(recordstore.financials(), "Financials for Wee Music Shop. Store balance is £150, and the stock total is £44.96");
   });
 
 });
