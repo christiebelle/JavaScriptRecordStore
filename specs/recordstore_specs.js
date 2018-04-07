@@ -68,20 +68,20 @@ describe('recordstore', function() {
     assert.deepStrictEqual(recordstore.financials(), "Financials for Wee Music Shop. Store balance is £160.99, and the stock total is £33.97");
   });
 
-  it("should list records by genre", function() {
-    recordstore.addRecord(record1);
-    recordstore.addRecord(record2);
-    recordstore.addRecord(record3);
-    recordstore.addRecord(record4);
-    assert.deepStrictEqual(recordstore.filterGenre("Rock"), [record3]);
-  });
+  // it("should list records by genre", function() {
+  //   recordstore.addRecord(record1);
+  //   recordstore.addRecord(record2);
+  //   recordstore.addRecord(record3);
+  //   recordstore.addRecord(record4);
+  //   assert.deepStrictEqual(recordstore.filterGenre("Rock"), [record3]);
+  // });
 
 });
 
 // Part B
 // Create a method that lists the inventory. PENDING
 
-// Create a method that allows the store to view all Records of a given Genre.
+// Create a method that allows the store to view all Records of a given Genre. PENDING
 
 // Part C
 // Create a RecordCollector (or Customer) constructor who can buy and sell records.
