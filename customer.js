@@ -10,12 +10,13 @@ Customer.prototype.addRecordToCollection = function (record) {
   this.collection.push(record);
 };
 
-Customer.prototype.buyRecord = function (record) {
+Customer.prototype.sellRecord = function (record) {
   this.collection.push(record);
 };
 
-Customer.prototype.sellRecord = function (record) {
-  this.collection.push(record);
+Customer.prototype.valueOfCollection = function (record) {
+  let value = _.sumBy(this.collection, 'price');
+  return value;
 };
 
 module.exports = Customer;
