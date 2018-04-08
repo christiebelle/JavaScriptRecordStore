@@ -55,6 +55,10 @@ describe('customer', function() {
   it("should be able to view the value of their collection", function() {
     assert.strictEqual(customer1.valueOfCollection(), 23.98);
   });
+
+  it("should be able to view the value of their collection by genre", function() {
+    assert.strictEqual(customer1.filteredValueOfCollection("Rap"), 10.99);
+  });
 });
 
 // Part C

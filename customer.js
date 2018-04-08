@@ -14,8 +14,15 @@ Customer.prototype.sellRecord = function (record) {
   this.collection.push(record);
 };
 
-Customer.prototype.valueOfCollection = function (record) {
+Customer.prototype.valueOfCollection = function () {
   let value = _.sumBy(this.collection, 'price');
+  return value;
+};
+
+Customer.prototype.filteredValueOfCollection = function (genre) {
+  let filtered = _.filter(this.collection, ['genre' === genre]);
+  return filtered;
+  let value = _.sumBy(filtered, 'price');
   return value;
 };
 
