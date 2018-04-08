@@ -59,6 +59,10 @@ describe('customer', function() {
   it("should be able to view the value of their collection by genre", function() {
     assert.strictEqual(customer1.filteredValueOfCollection("Rap"), 10.99);
   });
+
+  it("should be able to view the most valuable record", function() {
+    assert.strictEqual(customer1.mostValuable(), 10.99);
+  });
 });
 
 // Part C
@@ -70,7 +74,7 @@ describe('customer', function() {
 
 // The RecordCollector should be able to view the total value of all records of a given Genre PENDING
 
-// The RecordCollector should be able to view their most valuable record.
+// The RecordCollector should be able to view their most valuable record. PENDING
 
 // The RecordCollector should be able to sort their records by value. (ascending or descending)
 

@@ -23,6 +23,16 @@ Customer.prototype.valueOfCollection = function () {
   return value;
 };
 
+Customer.prototype.mostValuable = function () {
+  let value = 0
+  for(record of this.collection){
+    if(record.price > value){
+      value = record.price;
+    };
+  };
+  return value;
+};
+
 Customer.prototype.filteredValueOfCollection = function (genre) {
   let filtered = _.filter(this.collection, ['genre' === genre]);
   return filtered;
