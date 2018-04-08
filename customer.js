@@ -14,6 +14,10 @@ Customer.prototype.sellRecord = function (record) {
   this.collection.push(record);
 };
 
+Customer.prototype.sort = function () {
+  let sorted = _.sortBy(this.collection);
+};
+
 Customer.prototype.valueOfCollection = function () {
   let value = _.sumBy(this.collection, 'price');
   return value;
